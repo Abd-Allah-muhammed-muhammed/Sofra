@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/restaurant_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_200"
+        app:cardCornerRadius="@dimen/dimen_1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/restaurant_image_view"
+                android:layout_width="@dimen/_100"
+                android:layout_height="@dimen/_100"
+                android:layout_marginStart="@dimen/smal"
+                android:layout_marginTop="@dimen/margin_padding_large"
+                android:layout_marginEnd="8dp" />
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:id="@+id/layout_2"
+                android:layout_toEndOf="@id/restaurant_image_view"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/restaurant_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_padding_large"
+                    android:layout_gravity="center"
+                    android:text="@string/restaurant_name_text"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_xnormal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="التصنيفات"
+                    android:ems="10"
+                    android:id="@+id/restaurant_categories_tv"
+                    android:layout_marginTop="@dimen/smal"/>
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/restaurant_tvrating_bar"
+                    android:stepSize="0.5"
+                    android:numStars="5"
+                    android:rating="3.5"
+                    style="?android:attr/ratingBarStyleSmall"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/layout_2"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_padding_large"
+                android:layout_marginStart="@dimen/smal"
+                android:layout_marginEnd="@dimen/smal">
+
+                <TextView
+                    android:id="@+id/restaurant_avilblty_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="@string/open_now"
+                    android:textColor="@color/green"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/restaurant_min_order_tv"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/smal"
+                    android:text="@string/min_order_text"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/restaurant_delivery_fee_tv"
+                    android:layout_marginTop="@dimen/smal"
+                    android:gravity="center"
+                    android:text="@string/delivery_fee"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

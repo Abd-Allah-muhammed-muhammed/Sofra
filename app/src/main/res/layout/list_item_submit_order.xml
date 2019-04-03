@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl">
+
+    <ImageView
+        android:id="@+id/Submit_Order_img_item"
+        android:layout_width="@dimen/xxxxlarg"
+        android:layout_height="@dimen/xxxxlarg"
+        android:layout_margin="@dimen/smal"
+        android:src="@color/gray" />
+
+    <TextView
+        android:gravity="start"
+        android:id="@+id/Submit_Order_Tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/smal"
+        android:layout_toEndOf="@+id/Submit_Order_img_item"
+        android:lines="1"
+        android:text="@string/user_name"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_marginTop="@dimen/smal"
+        android:layout_marginStart="@dimen/larg"
+        android:layout_marginEnd="@dimen/smal"
+        android:gravity="end"
+        android:layout_alignParentEnd="true"
+        android:text="قم الطلب"
+        android:layout_toEndOf="@id/Submit_Order_Tv_name"
+        android:id="@+id/Submit_Order_tv_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/Submit_Order_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Submit_Order_Tv_name"
+        android:layout_marginTop="@dimen/smal"
+        android:layout_marginEnd="@dimen/smal"
+        android:layout_toEndOf="@+id/Submit_Order_img_item"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/Submit_Order_Tv_price"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/album_dp_20"
+            android:background="@color/gray"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/smal"
+            android:text="@string/price_text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/Submit_Order_Tv_delivery_cost"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/album_dp_20"
+            android:layout_marginTop="@dimen/_3"
+
+            android:background="@color/gray"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/smal"
+            android:text="@string/delivery_fee"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/Submit_Order_Tv_total"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/album_dp_20"
+            android:layout_marginTop="@dimen/_3"
+            android:background="@color/gray"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/smal"
+            android:text="@string/total"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/Submit_Order_Tv_address"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/album_dp_20"
+            android:layout_marginTop="@dimen/_3"
+            android:background="@color/dark_gray"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/smal"
+            android:text="@string/address"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Submit_Order_Layout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/larg"
+        android:layout_below="@+id/Submit_Order_Layout"
+        android:layout_marginTop="@dimen/smal"
+        android:layout_marginBottom="@dimen/larg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/Submit_order_btn_number"
+            android:layout_width="@dimen/_107"
+            android:layout_height="@dimen/xlarg"
+            android:layout_marginStart="@dimen/larg"
+            android:layout_marginEnd="@dimen/larg"
+            android:background="@color/red"
+            android:drawableStart="@drawable/ic_phone_black_24dp"
+            android:lines="1"
+            android:paddingStart="@dimen/smal"
+            android:text="01061213663"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/Submit_order_btn_accept"
+            android:layout_width="@dimen/_107"
+            android:layout_height="@dimen/xlarg"
+            android:layout_marginEnd="@dimen/larg"
+            android:background="@color/green"
+            android:drawableStart="@drawable/ic_done_all_black_24dp"
+            android:paddingStart="@dimen/larg"
+            android:paddingEnd="@dimen/larg"
+            android:text="@string/accept"
+            android:textColor="@color/white"
+            android:textSize="10sp"/>
+
+        <Button
+android:id="@+id/Submit_Order_btn_cancel"
+            android:layout_width="@dimen/_107"
+            android:layout_height="@dimen/xlarg"
+            android:background="@color/dark_gray"
+            android:drawableStart="@drawable/ic_cancel_black_24dp"
+            android:paddingStart="@dimen/larg"
+            android:paddingEnd="@dimen/larg"
+            android:text="@string/refuese"
+            android:textColor="@color/gray"
+            android:textSize="10sp"
+            />
+    </LinearLayout>
+
+    <TextView
+
+
+        android:id="@+id/Submit_order_tv_complete_order"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/larg"
+        android:layout_below="@+id/Submit_Order_Layout"
+        android:layout_marginTop="@dimen/larg"
+        android:background="@color/complet"
+        android:gravity="center"
+        android:text="@string/copletorder"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_small"
+         />
+
+</RelativeLayout>

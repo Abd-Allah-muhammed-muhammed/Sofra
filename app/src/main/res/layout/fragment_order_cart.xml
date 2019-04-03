@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderCartFragment">
+
+   <android.support.v7.widget.RecyclerView
+       android:id="@+id/Order_Cart_Rv"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_above="@+id/OrderCart_TV_total"
+       >
+   </android.support.v7.widget.RecyclerView>
+
+<TextView
+    android:gravity="center"
+    android:textColor="@color/black"
+    android:text="12"
+    android:layout_marginBottom="@dimen/larg"
+    android:id="@+id/OrderCart_TV_total"
+    android:background="@color/gray"
+    android:layout_above="@+id/Order_Cart_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/xxlarg" />
+
+   <RelativeLayout
+       android:id="@+id/Order_Cart_layout"
+       android:gravity="center"
+       android:layout_marginBottom="@dimen/larg"
+       android:layout_alignParentBottom="true"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+      <Button
+          android:textStyle="bold"
+          android:textSize="@dimen/text_size_xnormal"
+          android:textColor="@color/white"
+          android:text="تنفيذ الطلب"
+          android:background="@color/green"
+          android:layout_marginRight="@dimen/larg"
+          android:id="@+id/OrderCart_btn_Make_request"
+          android:layout_width="@dimen/_5xlarg"
+          android:layout_height="@dimen/xxlarg" />
+      <Button
+          android:textStyle="bold"
+          android:textColor="@color/black"
+          android:textSize="@dimen/text_size_xnormal"
+          android:text="@string/add_moor"
+          android:background="@color/colorPrimary"
+          android:layout_toEndOf="@+id/OrderCart_btn_Make_request"
+          android:id="@+id/OrderCart_btn_AddMoor"
+          android:layout_width="@dimen/_5xlarg"
+          android:layout_height="@dimen/xxlarg" />
+   </RelativeLayout>
+
+
+</RelativeLayout>

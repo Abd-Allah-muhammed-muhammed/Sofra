@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.AddNewOfferskFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/Add_Offer_tv_name"
+                style="@style/margin_items"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xxlarg"
+                android:layout_marginTop="@dimen/larg"
+                android:background="@drawable/back_login_items"
+                android:gravity="center_vertical"
+                android:hint="@string/Offer_name"
+                android:inputType="text"
+                android:paddingEnd="@dimen/medum" />
+
+
+            <EditText
+                android:id="@+id/Add_Offer_tv_dec"
+                style="@style/margin_items"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_5xlarg"
+                android:layout_below="@+id/Add_Offer_tv_name"
+                android:layout_marginTop="@dimen/larg"
+                android:background="@drawable/back_login_items"
+                android:gravity="top"
+                android:hint="@string/product_dec"
+                android:inputType="text"
+                android:paddingTop="@dimen/smal"
+                android:paddingEnd="@dimen/medum" />
+
+            <EditText
+                android:id="@+id/Add_Offer_tv_price"
+                style="@style/margin_items"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xxlarg"
+                android:layout_below="@+id/Add_Offer_tv_dec"
+                android:layout_marginTop="@dimen/larg"
+                android:background="@drawable/back_login_items"
+                android:gravity="center_vertical"
+                android:hint="@string/product_price"
+                android:inputType="text"
+                android:paddingEnd="@dimen/medum" />
+
+
+            <LinearLayout
+                android:id="@+id/AddOffers_layout_from_to"
+                style="@style/margin_items"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xxlarg"
+                android:layout_below="@+id/Add_Offer_tv_price"
+                android:layout_marginTop="@dimen/larg"
+
+                android:orientation="horizontal"
+
+                >
+
+                <!---->
+
+                <TextView
+                    android:drawableStart="@drawable/ic_date_range_black_24dp"
+android:paddingStart="@dimen/smal"
+                    android:id="@+id/Add_Offer_Tv_Ending_at"
+                    android:gravity="center_vertical"
+                    android:paddingEnd="@dimen/smal"
+                    android:hint="@string/to"
+                    android:layout_marginEnd="@dimen/smal"
+                    android:layout_weight="1"
+                    android:background="@drawable/back_login_items"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/Add_Offer_Tv_Starting_at"
+
+                    android:paddingStart="@dimen/smal"
+                    android:drawableStart="@drawable/ic_date_range_black_24dp"
+                    android:paddingEnd="@dimen/smal"
+                    android:gravity="center_vertical"
+                    android:hint="@string/from"
+                    android:layout_marginStart="@dimen/smal"
+                    android:layout_weight="1"
+                    android:background="@drawable/back_login_items"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/Add_Offer_img"
+                android:layout_width="@dimen/nav_header_height"
+                android:layout_height="@dimen/nav_header_height"
+                android:layout_below="@+id/AddOffers_layout_from_to"
+                android:layout_margin="@dimen/larg"
+                android:src="@drawable/nophoto" />
+
+            <TextView
+                android:id="@+id/Add_product_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/AddOffers_layout_from_to"
+                android:layout_marginTop="@dimen/_100"
+                android:layout_toRightOf="@+id/Add_Offer_img"
+                android:text="@string/add_img_to_offer"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_medium" />
+
+
+            <Button
+                android:id="@+id/Add_Offer_btn_Add"
+                style="@style/margin_items"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xxlarg"
+                android:layout_below="@+id/Add_Offer_img"
+                android:layout_marginTop="@dimen/larg"
+                android:layout_marginBottom="51dp"
+                android:background="@color/green"
+                android:text="@string/add"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medum" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

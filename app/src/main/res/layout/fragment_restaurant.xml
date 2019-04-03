@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.RestaurantFragment">
+
+    <RelativeLayout
+        android:id="@+id/layout_shearch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/xlarg"
+        android:background="@color/back_layout_rest"
+        android:layoutDirection="rtl">
+
+        <Spinner
+            android:id="@+id/Get_Rest_sp_city"
+            android:layout_width="@dimen/nav_header_height"
+            android:layout_height="match_parent">
+
+        </Spinner>
+
+        <EditText
+            android:id="@+id/Get_Rest_Et_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin_padding_small"
+            android:layout_marginEnd="@dimen/margin_padding_xsmall"
+            android:layout_toLeftOf="@+id/Get_Rest_sp_city"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_search_black_24dp"
+            android:gravity="center"
+            android:hint="@string/search_here"
+            android:textSize="@dimen/text_size_small" />
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="@dimen/margin_padding_xsmall"
+        android:id="@+id/Get_Rest_rcy_restaurants"
+        android:layout_below="@+id/layout_shearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</RelativeLayout>

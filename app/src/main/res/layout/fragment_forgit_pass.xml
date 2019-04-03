@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.ForgetPassFragment">
+
+
+    <RelativeLayout
+        android:visibility="invisible"
+        android:id="@+id/Forget_pass_Layout_reset_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:drawablePadding="@dimen/margin_padding_small"
+            android:paddingEnd="@dimen/margin_padding_full"
+            android:textColor="@color/black"
+            android:drawableEnd="@drawable/ic_person_outline_black_24dp"
+            android:layout_marginTop="@dimen/larg"
+            android:textSize="@dimen/text_size_header"
+            android:textStyle="bold"
+            android:id="@+id/Forget_Pass_text"
+            android:gravity="center_vertical"
+            android:text="@string/forget_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/enter_ur_mail"
+            android:fontFamily="sans-serif-thin"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_header"
+            android:padding="@dimen/margin_padding_large"
+            android:layout_below="@+id/Forget_Pass_text"
+            android:gravity="center"
+            android:text="@string/enter_ur_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:padding="@dimen/medum"
+            android:id="@+id/Forget_pass_Et_mail"
+            style="@style/margin_items"
+            android:paddingEnd="@dimen/medum"
+            android:hint="@string/mail"
+            android:background="@drawable/back_login_items"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/larg"
+            android:layout_below="@+id/enter_ur_mail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xxxlarg" />
+
+        <Button
+            android:textSize="@dimen/medum"
+            android:text="@string/follow"
+            android:textColor="@color/white"
+            android:id="@+id/Forget_pass_btn_follow"
+            android:background="@color/green"
+            android:layout_marginTop="@dimen/xxlarg"
+            style="@style/margin_items"
+            android:layout_below="@+id/Forget_pass_Et_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/Forget_pass_Layout_new_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/enter_the_code"
+            android:fontFamily="sans-serif-thin"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_header"
+            android:padding="@dimen/margin_padding_large"
+            android:gravity="center"
+            android:text="@string/enter_cod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <EditText
+
+            android:padding="@dimen/medum"
+            android:id="@+id/Forget_pass_Et_Code"
+            style="@style/margin_items"
+            android:paddingEnd="@dimen/medum"
+            android:hint="@string/code"
+            android:background="@drawable/back_login_items"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/larg"
+            android:layout_below="@+id/enter_the_code"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xxxlarg" />
+
+        <TextView
+            android:layout_below="@+id/Forget_pass_Et_Code"
+            android:id="@+id/enter_new_pass"
+            android:fontFamily="sans-serif-thin"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_header"
+            android:padding="@dimen/margin_padding_large"
+            android:gravity="center"
+            android:text="@string/enter_new_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+
+            android:padding="@dimen/medum"
+            android:id="@+id/Forget_pass_Et_new_pass"
+            style="@style/margin_items"
+            android:paddingEnd="@dimen/medum"
+            android:hint="@string/enter_new_pass"
+            android:background="@drawable/back_login_items"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/larg"
+            android:layout_below="@+id/enter_new_pass"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xxxlarg" />
+
+        <EditText
+
+            android:padding="@dimen/medum"
+            android:id="@+id/Forget_pass_Et_re_new_pass"
+            style="@style/margin_items"
+            android:paddingEnd="@dimen/medum"
+            android:hint="@string/re_new_pass"
+            android:background="@drawable/back_login_items"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/larg"
+            android:layout_below="@+id/Forget_pass_Et_new_pass"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xxxlarg" />
+
+
+        <Button
+            android:textSize="@dimen/medum"
+            android:text="@string/change"
+            android:textColor="@color/white"
+            android:id="@+id/Forget_pass_btn_Change"
+            android:background="@color/green"
+            android:layout_marginTop="@dimen/xxlarg"
+            style="@style/margin_items"
+            android:layout_below="@+id/Forget_pass_Et_re_new_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

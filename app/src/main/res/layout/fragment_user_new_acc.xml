@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.UserNewAccFragment">
+
+    <EditText
+        android:layout_marginTop="@dimen/medum"
+        android:id="@+id/New_Acc_name_et"
+        style="@style/margin_items"
+        android:paddingRight="@dimen/medum"
+        android:hint="الاسم"
+        android:background="@drawable/back_login_items"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/xxlarg" />
+
+
+    <EditText
+        android:id="@+id/New_Acc_mail_et"
+        style="@style/margin_items"
+        android:paddingRight="@dimen/medum"
+        android:hint="البريد الالكتروني"
+        android:background="@drawable/back_login_items"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/smal"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/New_Acc_name_et"
+        android:layout_height="@dimen/xxlarg" />
+
+    <EditText
+        android:id="@+id/New_Acc_phone_et"
+        style="@style/margin_items"
+        android:paddingRight="@dimen/medum"
+        android:hint="الجوال"
+        android:background="@drawable/back_login_items"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/smal"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/New_Acc_mail_et"
+        android:layout_height="@dimen/xxlarg" />
+
+    <RelativeLayout
+        android:id="@+id/Layout_city"
+        android:background="@drawable/back_login_items"
+        android:paddingRight="@dimen/medum"
+        style="@style/margin_items"
+        android:layout_below="@+id/New_Acc_phone_et"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/xxlarg">
+<Spinner
+    android:id="@+id/New_Acc_City_sp"
+    android:layoutDirection="rtl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+    android:id="@+id/Layout_region"
+    android:background="@drawable/back_login_items"
+    android:paddingRight="@dimen/medum"
+    style="@style/margin_items"
+    android:layout_below="@+id/Layout_city"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/xxlarg">
+    <Spinner
+        android:id="@+id/New_Acc_region_sp"
+        android:layoutDirection="rtl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>
+
+    <EditText
+        android:id="@+id/New_Acc_address_et"
+        style="@style/margin_items"
+        android:paddingRight="@dimen/medum"
+        android:hint="وصف السكن"
+        android:background="@drawable/back_login_items"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/smal"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/Layout_region"
+        android:layout_height="@dimen/_5xlarg" />
+
+
+    <EditText
+        android:id="@+id/New_Acc_pass_et"
+        style="@style/margin_items"
+        android:paddingEnd="@dimen/medum"
+        android:hint="@string/pass"
+        android:background="@drawable/back_login_items"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/smal"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/New_Acc_address_et"
+        android:layout_height="@dimen/xxlarg" />
+
+    <EditText
+        android:id="@+id/New_Acc_active_pass_et"
+        style="@style/margin_items"
+        android:paddingRight="@dimen/medum"
+        android:hint="اعادة كلمة المرور"
+        android:background="@drawable/back_login_items"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/smal"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/New_Acc_pass_et"
+        android:layout_height="@dimen/xxlarg" />
+
+    <Button
+        android:id="@+id/New_Acc_next_btn"
+        android:textSize="@dimen/medum"
+        android:textColor="@color/white"
+        android:text="@string/next"
+        android:layout_marginTop="@dimen/medum"
+        android:background="@color/green"
+        style="@style/margin_items"
+        android:layout_below="@id/New_Acc_active_pass_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DisplayItemFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/Display_item_img"
+                android:layout_width="@dimen/_300"
+                android:layout_height="@dimen/_190"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/larg"
+                android:scaleType="fitXY"
+                android:src="@color/red_error" />
+
+            <TextView
+                android:id="@+id/Display_item_tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Display_item_img"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/smal"
+                android:layout_marginEnd="@dimen/smal"
+                android:fontFamily="sans-serif-thin"
+                android:text="اسم الطعام"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_header"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Display_item_tv_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Display_item_tv_name"
+                android:layout_alignParentEnd="true"
+                android:ems="13"
+                android:lines="4"
+                android:padding="@dimen/smal"
+                android:text="هذا النص  عباره عن وصف للطعام المطلوب وليس له اي علاقه باي حاجه غير العلاقه الي هوا ليه علاقه بيها واخد بالك انت ازاي  " />
+
+            <TextView
+                android:id="@+id/Display_item_tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Display_item_tv_name"
+                android:layout_alignParentStart="true"
+                android:layout_margin="@dimen/smal"
+                android:lines="2"
+                android:padding="@dimen/smal"
+                android:text="السعر \n 20$"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/View_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1"
+                android:layout_below="@+id/Display_item_tv_desc"
+                android:layout_marginStart="@dimen/smal"
+                android:layout_marginTop="@dimen/text_size_xnormal"
+                android:layout_marginEnd="@dimen/smal"
+                android:background="@color/dark_gray" />
+
+            <TextView
+                android:id="@+id/Display_item_tv_wait"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/View_1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/smal"
+                android:padding="@dimen/smal"
+                android:text="مدة تجهيز الطلب : 20 دقيقة"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/View_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1"
+                android:layout_below="@+id/Display_item_tv_wait"
+                android:layout_marginStart="@dimen/smal"
+                android:layout_marginTop="@dimen/smal"
+                android:layout_marginEnd="@dimen/smal"
+                android:background="@color/dark_gray" />
+
+            <TextView
+                android:id="@+id/Display_item_tv_special_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/View_2"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/smal"
+                android:padding="@dimen/smal"
+                android:text="طلب خاص" />
+
+            <EditText
+                android:id="@+id/Display_item_et_special_order"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xxxxlarg"
+                android:layout_below="@+id/Display_item_tv_special_order"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/larg"
+                android:layout_marginEnd="@dimen/smal"
+                android:layout_marginBottom="@dimen/larg"
+                android:background="@drawable/back_login_items" />
+
+            <TextView
+                android:layout_marginEnd="@dimen/larg"
+                android:id="@+id/Display_item_tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Display_item_et_special_order"
+                android:layout_alignParentEnd="true"
+                android:text="الكمية"
+                android:layout_marginTop="@dimen/smal"
+                android:textColor="@color/black" />
+
+            <Button
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="@dimen/larg"
+                android:id="@+id/Display_item_btn_minus"
+                android:layout_width="@dimen/xxlarg"
+                android:layout_height="@dimen/_35"
+                android:layout_below="@id/Display_item_et_special_order"
+                android:layout_toStartOf="@+id/Display_item_tv_count"
+                android:background="@color/green"
+                android:drawableRight="@drawable/ic_remove_black_24dp"
+                android:paddingRight="@dimen/album_dp_15" />
+
+            <TextView
+                android:id="@+id/Display_item_tv_Display_count"
+                android:layout_marginEnd="@dimen/smal"
+                android:background="@drawable/back_login_items"
+                android:layout_width="@dimen/nav_header_height"
+                android:layout_height="@dimen/xlarg"
+                android:layout_below="@+id/Display_item_et_special_order"
+                android:layout_toStartOf="@+id/Display_item_btn_minus"
+                android:gravity="center"
+                android:text="1" />
+            <Button
+                android:layout_marginTop="@dimen/_3"
+                android:layout_marginEnd="@dimen/smal"
+                android:id="@+id/Display_item_btn_plus"
+                android:layout_width="@dimen/xxlarg"
+                android:layout_height="@dimen/_35"
+                android:layout_below="@id/Display_item_et_special_order"
+                android:layout_toStartOf="@+id/Display_item_tv_Display_count"
+                android:background="@color/green"
+                android:drawableRight="@drawable/ic_add_black_24dp"
+                android:paddingRight="@dimen/album_dp_15" />
+
+
+            <Button
+                android:id="@+id/Display_item_btn_addTo_cart"
+                android:layout_marginStart="@dimen/larg"
+                android:layout_marginEnd="@dimen/larg"
+                android:gravity="start|center"
+                android:paddingRight="140dp"
+                android:drawableRight="@drawable/ic_add_shopping_cart_black_24dp"
+                android:textStyle="bold"
+                android:text="اضف الي السله"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="@dimen/larg"
+                android:layout_below="@+id/Display_item_tv_Display_count"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

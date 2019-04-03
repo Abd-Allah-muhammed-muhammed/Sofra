@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_5xlarg"
+    android:layoutDirection="rtl">
+
+    <ImageView
+        android:layout_marginEnd="@dimen/smal"
+        android:layout_marginBottom="@dimen/larg"
+        android:layout_marginStart="@dimen/smal"
+        android:id="@+id/Room_img"
+        android:layout_marginTop="@dimen/larg"
+        android:layout_width="@dimen/xxxxlarg"
+        android:layout_height="@dimen/_5xlarg"
+        android:scaleType="fitXY"
+        android:src="@drawable/nophoto" />
+
+    <TextView
+
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:id="@+id/Room_tv_name"
+        android:layout_marginTop="@dimen/larg"
+        android:text="@string/food_name_text"
+        android:layout_toEndOf="@+id/Room_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginEnd="@dimen/smal"
+        android:id="@+id/Room_Tv_Qonitity"
+        android:textSize="@dimen/text_size_small"
+        android:layout_marginTop="@dimen/larg"
+        android:layout_below="@id/Room_tv_name"
+        android:layout_toEndOf="@+id/Room_img"
+        android:text="الكمية"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/Room_Layout"
+        android:layout_marginTop="@dimen/album_dp_20"
+        android:layout_toEndOf="@+id/Room_Tv_Qonitity"
+        android:layout_below="@+id/Room_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+<Button
+    android:drawableRight="@drawable/ic_add_black_24dp"
+android:id="@+id/Room_btn_plus"
+    android:background="@color/green"
+    android:layout_width="@dimen/larg"
+    android:layout_height="@dimen/larg" />
+
+        <TextView
+            android:background="@drawable/back_login_items"
+            android:id="@+id/Room_Tv_Qonitity_num"
+            android:textStyle="bold"
+            android:textColor="@color/green"
+            android:gravity="center"
+            android:text="1"
+            android:layout_marginEnd="@dimen/smal"
+            android:layout_marginTop="@dimen/album_dp_2"
+            android:layout_marginStart="@dimen/smal"
+            android:layout_toEndOf="@+id/Room_btn_plus"
+            android:layout_width="@dimen/xxxxlarg"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_toEndOf="@+id/Room_Tv_Qonitity_num"
+            android:drawableRight="@drawable/ic_remove_black_24dp"
+            android:id="@+id/Room_btn_minus"
+            android:background="@color/green"
+            android:layout_width="@dimen/larg"
+            android:layout_height="@dimen/larg" />
+    </RelativeLayout>
+<TextView
+    android:fontFamily="serif-monospace"
+    android:textStyle="bold"
+    android:textColor="@color/black"
+    android:layout_marginStart="@dimen/xxxxlarg"
+    android:text="@string/price_text"
+    android:lines="2"
+    android:layout_below="@+id/Room_tv_name"
+    android:layout_toEndOf="@+id/Room_Layout"
+    android:id="@+id/Room_tv_price"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+    <TextView
+        android:textStyle="bold"
+android:textColor="@color/black"
+        android:id="@+id/Room_tv_totel"
+        android:paddingLeft="@dimen/smal"
+        android:textSize="@dimen/text_size_small"
+        android:textDirection="ltr"
+        android:layout_marginTop="@dimen/smal"
+        android:background="@color/gray"
+        android:text="15"
+        android:paddingStart="@dimen/smal"
+        android:drawableStart="@drawable/ic_delete_sweep_black_24dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/Room_Tv_Qonitity"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/larg" />
+
+
+</RelativeLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/splash_back"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.splashActivity">
+
+
+
+    <ImageView
+        android:layout_marginTop="60dp"
+        android:id="@+id/Splash_logo"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo" />
+    <TextView
+        android:fontFamily="sans-serif"
+        android:id="@+id/Splash_text"
+        android:layout_marginTop="30dp"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:text="التطبيق الاول لبيع وطلب الطعام"
+        android:layout_below="@+id/Splash_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/Splash_order_food"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="@string/order_food"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/back_button"
+        android:layout_below="@+id/Splash_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:id="@+id/Splash_Sell_Food"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="@string/sell_food"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/back_button"
+        android:layout_below="@+id/Splash_order_food"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/Splash_layout_social"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/Splash_Sell_Food"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/Splash_Ic_Twitter"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/twitter"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <ImageView
+            android:id="@+id/Splash_Ic_Inesta"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/instaa"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+    </LinearLayout>
+
+    <TextView
+        android:fontFamily="sans-serif"
+        android:layout_marginTop="30dp"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:text="@string/privcy"
+        android:gravity="center"
+        android:layout_below="@+id/Splash_layout_social"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

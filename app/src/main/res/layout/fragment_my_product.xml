@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyProductFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/MyProducts_Rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <Button
+android:paddingTop="@dimen/margin_padding_small"
+        android:id="@+id/MyProducts_btn_add_new_item"
+        android:textSize="@dimen/text_size_header"
+        android:textColor="@color/white"
+        android:text="@string/add_new_product"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/xxxlarg"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_padding_large"
+        android:background="@color/dark_gray"
+        android:drawableTop="@drawable/ic_add_to_photos_black_24dp" />
+
+</RelativeLayout>

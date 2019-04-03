@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/smal"
+    android:background="@drawable/back_login_items"
+    android:layoutDirection="rtl">
+
+    <RelativeLayout
+        android:id="@+id/My_Offers_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_5xlarg">
+
+        <ImageView
+            android:id="@+id/My_Offers_img"
+            android:layout_width="@dimen/_107"
+            android:layout_height="@dimen/_107"
+            android:layout_margin="@dimen/smal"
+            android:src="@color/gray" />
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/smal"
+            android:layout_toEndOf="@+id/My_Offers_img"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/My_Offers_Tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/album_dp_2"
+                android:layout_marginBottom="@dimen/smal"
+                android:text="احصل علي خصم 50% علي كل طلب جديد"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/My_Offers_Tv_name_rest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/smal"
+                android:text="محلات الفطيرة الدمشقية"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/My_Offers_Tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/smal"
+                android:text="ساري الي 15\12\2018"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:id="@+id/My_Offers_Tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="السعر حسب الطلب"
+                android:textSize="@dimen/text_size_small" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

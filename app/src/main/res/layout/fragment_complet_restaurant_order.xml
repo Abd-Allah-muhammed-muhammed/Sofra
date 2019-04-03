@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.CompletRestaurantOrderFragment">
+
+
+   <TextView
+       android:padding="@dimen/smal"
+       android:id="@android:id/empty"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_centerInParent="true"
+       android:layout_marginTop="@dimen/xxxxlarg"
+       android:background="#FFC107"
+       android:textSize="@dimen/text_size_height"
+       android:gravity="center_horizontal"
+       android:text="@string/no_result_found"
+       android:textColor="@color/white" />
+
+   <android.support.v7.widget.RecyclerView
+       android:id="@+id/complete_Order_rest_RV"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+   </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

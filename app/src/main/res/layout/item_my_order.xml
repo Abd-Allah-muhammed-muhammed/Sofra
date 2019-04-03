@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/smal"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?selectableItemBackground">
+
+    <RelativeLayout
+        android:id="@+id/restaurant_card_view_edit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/My_Order_img_name"
+            android:layout_width="@dimen/_100"
+            android:layout_height="@dimen/_100"
+            android:layout_marginTop="@dimen/text_size_xnormal"
+            android:layout_marginBottom="@dimen/margin_padding_large"
+            android:src="@drawable/logo" />
+
+        <RelativeLayout
+            android:layout_marginLeft="@dimen/smal"
+            android:id="@+id/My_Order_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/My_Order_img_name">
+
+            <TextView
+                android:id="@+id/My_Order_tv_name"
+                android:lines="1"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/album_dp_6"
+                android:ems="5"
+                android:gravity="end"
+android:textSize="@dimen/text_size_xnormal"
+                android:text="@string/food_name_text"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/My_Order_tv_price"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/My_Order_tv_name"
+                android:layout_marginTop="@dimen/smal"
+                android:ems="5"
+                android:lines="1"
+
+                android:gravity="end"
+                android:text="@string/price_text" />
+
+            <TextView
+                android:id="@+id/My_Order_tv_delevary"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/My_Order_tv_price"
+                android:layout_marginTop="@dimen/theme_corner_radius"
+                android:ems="5"
+                android:gravity="end"
+                android:lines="1"
+
+                android:text="التوصيل" />
+
+            <TextView
+                android:lines="1"
+                android:id="@+id/My_Order_tv_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/My_Order_tv_delevary"
+                android:layout_marginTop="@dimen/theme_corner_radius"
+                android:ems="5"
+                android:gravity="end"
+                android:text="الاجمالي" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:gravity="end"
+android:lines="1"
+            android:id="@+id/My_Order_tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/xxxxlarg"
+            android:layout_marginTop="@dimen/xxlarg"
+            android:layout_toEndOf="@+id/My_Order_layout"
+            android:text="رقم الطلب" />
+
+
+        <RelativeLayout
+            android:layout_marginLeft="@dimen/xlarg"
+            android:layout_marginTop="@dimen/smal"
+            android:layout_toRightOf="@+id/My_Order_layout"
+            android:layout_below="@+id/My_Order_tv_id"
+            android:id="@+id/My_Order_layout_completed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:padding="@dimen/margin_padding_tiny"
+                android:drawableRight="@drawable/ic_done_all_black_24dp"
+                android:layout_marginRight="@dimen/smal"
+                android:background="@color/green"
+                android:text="استلام"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_small"
+                android:id="@+id/My_Order_btn_like"
+                android:layout_width="@dimen/xxxlarg"
+                android:layout_height="@dimen/xlarg" />
+
+            <Button
+
+                android:padding="@dimen/smal"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_small"
+android:drawableRight="@drawable/ic_cancel_black_24dp"
+                android:background="@color/red"
+                android:text="رفض"
+                android:layout_toRightOf="@+id/My_Order_btn_like"
+                android:id="@+id/My_Order_btn_DisLike"
+                android:layout_width="@dimen/xxxlarg"
+                android:layout_height="@dimen/xlarg" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>
