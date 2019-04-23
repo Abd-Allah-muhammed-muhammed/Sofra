@@ -5,9 +5,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.example.sofra.ui.fragments.MenuFragment;
-import com.example.sofra.ui.fragments.RestaurantDetailsFragment;
-import com.example.sofra.ui.fragments.RestaurantReviewsFragment;
+import com.example.sofra.ui.fragments.clint.order.MenuFragment;
+import com.example.sofra.ui.fragments.clint.order.restaurant.RestaurantDetailsFragment;
+import com.example.sofra.ui.fragments.clint.order.restaurant.RestaurantReviewsFragment;
 
 public class TapLayoutAdapter  extends FragmentPagerAdapter {
     public TapLayoutAdapter(FragmentManager fm) {

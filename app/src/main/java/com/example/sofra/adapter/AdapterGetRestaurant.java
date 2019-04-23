@@ -17,8 +17,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.sofra.R;
-import com.example.sofra.ui.fragments.Restaurants_detialsAndInfoFragment;
-import com.example.sofra.helper.SharedPreferencesManger;
+import com.example.sofra.ui.fragments.clint.order.restaurant.Restaurants_detialsAndInfoFragment;
 import com.example.sofra.model.list_of_restaurants.ListOfRestaurantsCategory;
 import com.example.sofra.model.list_of_restaurants.ListOfRestaurantsDatum;
 
@@ -29,12 +28,13 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 import static com.example.sofra.helper.HelperMethod.replaceFragment;
-import static com.example.sofra.ui.fragments.RegistreResturantFragment.TAG;
+import static com.example.sofra.ui.fragments.login.RegistreResturantFragment.TAG;
 
 public class AdapterGetRestaurant extends RecyclerView.Adapter<AdapterGetRestaurant.ViewHolder> {
     Activity activity;
     Context context;
     List<ListOfRestaurantsDatum> listOfRestaurant;
+
 
     // private ApiServices apiServices;
 
@@ -88,9 +88,9 @@ public class AdapterGetRestaurant extends RecyclerView.Adapter<AdapterGetRestaur
         viewHolder.restaurantCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                SharedPreferencesManger.SaveData(activity,"id_restaurant",listOfRestaurant.get(i).getId());
-                replaceFragment(new Restaurants_detialsAndInfoFragment(), R.id.Home_replace_fragments,
+                Restaurants_detialsAndInfoFragment infoFragment = new Restaurants_detialsAndInfoFragment();
+                infoFragment.idRest = listOfRestaurant.get(i).getId();
+                replaceFragment(infoFragment, R.id.Home_replace_fragments,
                         ((FragmentActivity) context).getSupportFragmentManager().beginTransaction());
             }
         });

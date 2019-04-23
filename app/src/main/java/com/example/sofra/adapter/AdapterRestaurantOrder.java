@@ -21,8 +21,8 @@ import com.example.sofra.api.ApiServices;
 import com.example.sofra.helper.SharedPreferencesManger;
 import com.example.sofra.model.accept_order.AcceptOrder;
 import com.example.sofra.model.restayrant_order.Datum;
-import com.example.sofra.ui.fragments.CompletRestaurantOrderFragment;
-import com.example.sofra.ui.fragments.CurrentRestaurantOrderFragment;
+import com.example.sofra.ui.fragments.restaurant.orders.CompletRestaurantOrderFragment;
+import com.example.sofra.ui.fragments.restaurant.orders.CurrentRestaurantOrderFragment;
 
 import java.util.List;
 

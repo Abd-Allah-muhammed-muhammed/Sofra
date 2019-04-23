@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OrderCartFragment">
+    tools:context=".ui.fragments.clint.order.OrderCartFragment">
 
    <android.support.v7.widget.RecyclerView
        android:id="@+id/Order_Cart_Rv"
@@ -14,6 +14,7 @@
    </android.support.v7.widget.RecyclerView>
 
 <TextView
+
     android:gravity="center"
     android:textColor="@color/black"
     android:text="12"
@@ -22,7 +23,7 @@
     android:background="@color/gray"
     android:layout_above="@+id/Order_Cart_layout"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/xxlarg" />
+    android:layout_height="@dimen/xlarg" />
 
    <RelativeLayout
        android:id="@+id/Order_Cart_layout"
@@ -36,7 +37,7 @@
           android:textSize="@dimen/text_size_xnormal"
           android:textColor="@color/white"
           android:text="تنفيذ الطلب"
-          android:background="@color/green"
+          android:background="@drawable/back_cart_items"
           android:layout_marginRight="@dimen/larg"
           android:id="@+id/OrderCart_btn_Make_request"
           android:layout_width="@dimen/_5xlarg"
@@ -46,7 +47,7 @@
           android:textColor="@color/black"
           android:textSize="@dimen/text_size_xnormal"
           android:text="@string/add_moor"
-          android:background="@color/colorPrimary"
+          android:background="@drawable/back_button_splash"
           android:layout_toEndOf="@+id/OrderCart_btn_Make_request"
           android:id="@+id/OrderCart_btn_AddMoor"
           android:layout_width="@dimen/_5xlarg"

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.AddNewOfferskFragment">
+    tools:context=".ui.fragments.restaurant.offers.AddNewOfferskFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -124,7 +124,7 @@ android:paddingStart="@dimen/smal"
                 android:layout_height="@dimen/xxlarg"
                 android:layout_below="@+id/Add_Offer_img"
                 android:layout_marginTop="@dimen/larg"
-                android:layout_marginBottom="51dp"
+                android:layout_marginBottom="@dimen/larg"
                 android:background="@color/green"
                 android:text="@string/add"
                 android:textColor="@color/white"

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:id="@+id/layout_register_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <EditText
+            android:id="@+id/rest_name_et"
+            style="@style/margin_items"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xxlarg"
+            android:layout_marginTop="@dimen/larg"
+            android:background="@drawable/back_login_items"
+            android:gravity="center_vertical"
+            android:hint="اسم المطعم "
+            android:padding="@dimen/medum"
+            android:paddingRight="@dimen/medum" />
+
+
+        <RelativeLayout
+            android:id="@+id/Layout_city"
+            style="@style/margin_items"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xxlarg"
+            android:layout_below="@+id/rest_name_et"
+            android:layout_marginTop="@dimen/larg"
+            android:background="@drawable/back_login_items"
+            android:paddingRight="@dimen/medum">
+
+            <Spinner
+                android:id="@+id/rest_City_sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layoutDirection="rtl" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Layout_region"
+            style="@style/margin_items"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xxlarg"
+            android:layout_below="@+id/Layout_city"
+            android:layout_marginTop="@dimen/larg"
+            android:background="@drawable/back_login_items"
+            android:paddingRight="@dimen/medum">
+
+            <Spinner
+                android:id="@+id/rest_region_sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layoutDirection="rtl" />
+
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/rest_mail_et"
+            style="@style/margin_items"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xxlarg"
+            android:layout_below="@+id/Layout_region"
+            android:layout_marginTop="@dimen/larg"
+            android:background="@drawable/back_login_items"
+            android:gravity="center_vertical"
+            android:hint="البريد الالكتروني"
+            android:paddingRight="@dimen/medum" />
+
+
+        <EditText
+            android:id="@+id/rest_pass_et"
+            style="@style/margin_items"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xxlarg"
+            android:layout_below="@+id/rest_mail_et"
+            android:layout_marginTop="@dimen/larg"
+            android:background="@drawable/back_login_items"
+            android:gravity="center_vertical"
+            android:hint="كلمة المرور "
+            android:paddingRight="@dimen/medum" />
+
+        <EditText
+            android:id="@+id/rest_active_pass_et"
+            style="@style/margin_items"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xxlarg"
+            android:layout_below="@+id/rest_pass_et"
+            android:layout_marginTop="@dimen/larg"
+            android:background="@drawable/back_login_items"
+            android:gravity="center_vertical"
+            android:hint="اعادة كلمة المرور"
+            android:paddingRight="@dimen/medum" />
+
+
+        <Button
+            android:layout_marginTop="@dimen/xxxlarg"
+            android:layout_below="@+id/rest_active_pass_et"
+            android:id="@+id/rest_next"
+            style="@style/margin_items"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xxlarg"
+            android:layout_marginBottom="27dp"
+            android:background="@color/green"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medum" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

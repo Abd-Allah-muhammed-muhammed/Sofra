@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home_clint"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="الصفحة الرئيسية" />
+        <item
+            android:id="@+id/nav_My_order_clint"
+            android:icon="@drawable/ic_local_offer_black_24dp"
+            android:title="طلباتي" />
+        <item
+            android:id="@+id/nav_order_notifications_clint"
+            android:icon="@drawable/ic_local_offer_black_24dp"
+            android:title=" التنبيهات" />
+        <item
+            android:id="@+id/nav_new_offers_clint"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="جديد العروض" />
+
+        <item
+            android:id="@+id/nav_about_app_clint"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="عن التطبيق" />
+
+        <item
+            android:id="@+id/nav_Terms_and_Conditions_clint"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="الشروط والاحكام" />
+        <item
+            android:id="@+id/nav_share_app_clint"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="شارك التطبيق " />
+
+
+        <item
+            android:id="@+id/nav_connect_uc_clint"
+            android:icon="@drawable/ic_menu_manage"
+            android:title=" تواصل معنا" />
+        <item
+            android:id="@+id/nav_logout_clint"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="تسجيل الخروج " />
+    </group>
+
+
+</menu>

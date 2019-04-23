@@ -6,174 +6,181 @@
     android:layoutDirection="rtl"
     android:background="@color/white"
 
-    tools:context=".ui.fragments.CompleteOrderClitnFragment">
+    tools:context=".ui.fragments.clint.order.CompleteOrderClitnFragment">
 
-    <RelativeLayout
-        android:layout_margin="@dimen/larg"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/Complete_order_tv_Add_notes"
-            android:textSize="@dimen/text_size_xnormal"
-            android:textColor="@color/black"
-            android:text="@string/add_notes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <EditText
-            android:id="@+id/Complete_order_Et_Add_notes"
-            android:layout_marginTop="@dimen/smal"
-            android:background="@drawable/back_login_items"
-            android:layout_below="@+id/Complete_order_tv_Add_notes"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_margin="@dimen/larg"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_190" />
-        <TextView
-            android:id="@+id/Complete_order_tv_Address"
-            android:layout_marginTop="@dimen/smal"
-            android:textSize="@dimen/text_size_xnormal"
-            android:textColor="@color/black"
-            android:text="عنوان التوصيل"
-            android:layout_below="@+id/Complete_order_Et_Add_notes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:id="@+id/Complete_order_Et_Address"
-            android:hint="@string/address"
-            android:background="@color/white"
-            android:layout_below="@id/Complete_order_tv_Address"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/complete_Order_Tv_pay"
-            android:layout_marginTop="@dimen/larg"
-            android:textColor="@color/black"
-            android:text="الدفع"
-            android:textSize="@dimen/text_size_xnormal"
-            android:layout_below="@id/Complete_order_Et_Address"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-<LinearLayout
-    android:id="@+id/Complete_Order_Layout_pay"
-    android:orientation="horizontal"
-    android:layout_below="@+id/complete_Order_Tv_pay"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-
-    <RadioButton
-        android:id="@+id/Complete_order_Rbtn_Cash"
-        android:checked="true"
-        android:text="نقدا عند الاستلام "
-        android:layout_weight="1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <RadioButton
-        android:id="@+id/Complete_order_Rbtn_internet"
-        android:text="شبكة عند الاستلام "
-        android:layout_weight="1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-</LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:id="@+id/Complete_Order_Layout_total"
-            android:background="@color/gray"
-            android:layout_marginTop="@dimen/xxxxlarg"
-            android:layout_below="@+id/Complete_Order_Layout_pay"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/xlarg">
-
+            android:layout_height="match_parent">
             <TextView
-                android:paddingStart="@dimen/smal"
+                android:id="@+id/Complete_order_tv_Add_notes"
+                android:textSize="@dimen/text_size_xnormal"
                 android:textColor="@color/black"
-                android:layout_gravity="center_vertical"
-                android:text="المجموع                :"
+                android:text="@string/add_notes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <TextView
-                android:id="@+id/Complete_Order_Tv_Total"
-                android:textColor="@color/black"
-android:layout_gravity="center_vertical"
-                android:gravity="end"
-                android:text="40 ريال"
-                android:paddingEnd="@dimen/smal"
+            <EditText
+                android:id="@+id/Complete_order_Et_Add_notes"
+                android:layout_marginTop="@dimen/smal"
+                android:background="@drawable/back_login_items"
+                android:layout_below="@+id/Complete_order_tv_Add_notes"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:id="@+id/Complete_Order_Layout_delveryCost"
-            android:background="@color/gray"
-            android:layout_below="@+id/Complete_Order_Layout_total"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/xlarg">
-
+                android:layout_height="@dimen/_190" />
             <TextView
-                android:paddingStart="@dimen/smal"
+                android:id="@+id/Complete_order_tv_Address"
+                android:layout_marginTop="@dimen/smal"
+                android:textSize="@dimen/text_size_xnormal"
                 android:textColor="@color/black"
-                android:layout_gravity="center_vertical"
-                android:text="رسوم التوصيل      :"
+                android:text="عنوان التوصيل"
+                android:layout_below="@+id/Complete_order_Et_Add_notes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <TextView
-                android:id="@+id/Complete_Order_Tv_DeliveryCost"
-                android:textColor="@color/black"
-                android:layout_gravity="center_vertical"
-                android:gravity="end"
-                android:text="40 ريال"
-                android:paddingEnd="@dimen/smal"
+
+            <EditText
+                android:id="@+id/Complete_order_Et_Address"
+                android:hint="@string/address"
+                android:background="@color/white"
+                android:layout_below="@id/Complete_order_tv_Address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:id="@+id/Complete_Order_Layout_AllTotal"
-            android:background="@color/dark_gray"
-            android:layout_below="@+id/Complete_Order_Layout_delveryCost"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/xlarg">
-
             <TextView
-
-                android:paddingStart="@dimen/smal"
+                android:id="@+id/complete_Order_Tv_pay"
+                android:layout_marginTop="@dimen/larg"
                 android:textColor="@color/black"
-                android:layout_gravity="center_vertical"
-                android:text="المبلغ الاجمالي      :"
+                android:text="الدفع"
+                android:textSize="@dimen/text_size_xnormal"
+                android:layout_below="@id/Complete_order_Et_Address"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:id="@+id/Complete_Order_Tv_AllTotal"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:id="@+id/Complete_Order_Layout_pay"
+                android:orientation="horizontal"
+                android:layout_below="@+id/complete_Order_Tv_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RadioButton
+                    android:id="@+id/Complete_order_Rbtn_Cash"
+                    android:text="نقدا عند الاستلام "
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/Complete_order_Rbtn_internet"
+                    android:text="شبكة عند الاستلام "
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/Complete_Order_Layout_total"
+                android:background="@color/gray"
+                android:layout_marginTop="@dimen/xxxxlarg"
+                android:layout_below="@+id/Complete_Order_Layout_pay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xlarg">
+
+                <TextView
+                    android:paddingStart="@dimen/smal"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_vertical"
+                    android:text="المجموع                :"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/Complete_Order_Tv_Total"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="end"
+                    android:text="40 ريال"
+                    android:paddingEnd="@dimen/smal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/Complete_Order_Layout_delveryCost"
+                android:background="@color/gray"
+                android:layout_below="@+id/Complete_Order_Layout_total"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xlarg">
+
+                <TextView
+                    android:paddingStart="@dimen/smal"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_vertical"
+                    android:text="رسوم التوصيل      :"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/Complete_Order_Tv_DeliveryCost"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="end"
+                    android:text="40 ريال"
+                    android:paddingEnd="@dimen/smal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/Complete_Order_Layout_AllTotal"
+                android:background="@color/dark_gray"
+                android:layout_below="@+id/Complete_Order_Layout_delveryCost"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xlarg">
+
+                <TextView
+
+                    android:paddingStart="@dimen/smal"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_vertical"
+                    android:text="المبلغ الاجمالي      :"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/Complete_Order_Tv_AllTotal"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="end"
+                    android:text="40 ريال"
+                    android:paddingEnd="@dimen/smal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/Complete_Order_btn_pay"
                 android:textColor="@color/black"
-                android:layout_gravity="center_vertical"
-                android:gravity="end"
-                android:text="40 ريال"
-                android:paddingEnd="@dimen/smal"
+                android:text="اتمام الشراء"
+                android:background="@color/back_button"
+                android:layout_marginTop="@dimen/larg"
+                style="@style/margin_items"
+                android:layout_below="@+id/Complete_Order_Layout_AllTotal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+        </RelativeLayout>
 
-        </LinearLayout>
+    </ScrollView>
 
-
-        <Button
-            android:id="@+id/Complete_Order_btn_pay"
-            android:textColor="@color/black"
-            android:text="اتمام الشراء"
-            android:background="@color/back_button"
-            android:layout_marginTop="@dimen/larg"
-            style="@style/margin_items"
-            android:layout_below="@+id/Complete_Order_Layout_AllTotal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </RelativeLayout>
 
 
 

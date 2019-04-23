@@ -5,8 +5,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.example.sofra.ui.fragments.CompletOrderFragment;
-import com.example.sofra.ui.fragments.CurentOrderFragment;
+import com.example.sofra.ui.fragments.clint.order.CompletOrderFragment;
+import com.example.sofra.ui.fragments.clint.order.CurentOrderFragment;
 
 public class TapLayoutMyOrderAdapter extends FragmentPagerAdapter {
     public TapLayoutMyOrderAdapter(FragmentManager fm) {

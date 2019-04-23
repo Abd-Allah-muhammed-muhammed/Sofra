@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.RestaurantContainerOrderFragment">
+    tools:context=".ui.fragments.general.RestaurantContainerOrderFragment">
 
    <android.support.design.widget.TabLayout
        android:id="@+id/Restaurant_Container_Order_Tb"

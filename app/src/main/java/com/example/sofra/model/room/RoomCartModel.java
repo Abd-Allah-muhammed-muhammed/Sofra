@@ -7,13 +7,20 @@ import android.arch.persistence.room.PrimaryKey;
 @Entity
 public class RoomCartModel {
 
-    public RoomCartModel( String photo_Url, String quantity, String price, String name, String restaurantId) {
+    public RoomCartModel(String notes ,  String photo_Url, String quantity, String price, String name, String restaurantId) {
 
         this.photo_Url = photo_Url;
         this.quantity = quantity;
         this.price = price;
         this.name = name;
         this.restaurantId = restaurantId;
+        this.notes = notes;
+
+    }
+
+
+    public RoomCartModel (){
+
     }
 
     @PrimaryKey(autoGenerate = true)
@@ -21,6 +28,9 @@ public class RoomCartModel {
 
     @ColumnInfo(name = "photo_Url")
     private String photo_Url;
+
+    @ColumnInfo(name = "notes")
+    private String notes;
 
     @ColumnInfo(name = "quantity")
     private String quantity;
@@ -34,7 +44,13 @@ public class RoomCartModel {
     @ColumnInfo(name = "RestaurantId")
     private String restaurantId;
 
+    public String getNotes() {
+        return notes;
+    }
 
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
 
     public String getRestaurantId() {
         return restaurantId;

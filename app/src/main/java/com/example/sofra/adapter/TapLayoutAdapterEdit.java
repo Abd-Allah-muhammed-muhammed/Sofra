@@ -4,17 +4,13 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.PagerAdapter;
 
-import com.example.sofra.ui.fragments.CompletRestaurantOrderFragment;
-import com.example.sofra.ui.fragments.CurrentRestaurantOrderFragment;
-import com.example.sofra.ui.fragments.MenuEditFragment;
-import com.example.sofra.ui.fragments.NewRestaurantOrderFragment;
-import com.example.sofra.ui.fragments.RestaurantDetailsEditFragment;
-import com.example.sofra.ui.fragments.RestaurantReviewsEditFragment;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.example.sofra.ui.fragments.restaurant.orders.CompletRestaurantOrderFragment;
+import com.example.sofra.ui.fragments.restaurant.orders.CurrentRestaurantOrderFragment;
+import com.example.sofra.ui.fragments.restaurant.food_item.MenuEditFragment;
+import com.example.sofra.ui.fragments.restaurant.orders.NewRestaurantOrderFragment;
+import com.example.sofra.ui.fragments.restaurant.RestaurantDetailsEditFragment;
+import com.example.sofra.ui.fragments.restaurant.RestaurantReviewsEditFragment;
 
 public class TapLayoutAdapterEdit extends FragmentPagerAdapter {
     private int id ;

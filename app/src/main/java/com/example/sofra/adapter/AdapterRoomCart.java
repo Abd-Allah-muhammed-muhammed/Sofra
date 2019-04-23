@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.sofra.R;
+import com.example.sofra.api.ApiServices;
 import com.example.sofra.model.list_of_restaurants.ListOfRestaurantsDatum;
 import com.example.sofra.model.room.AppDatabase;
 import com.example.sofra.model.room.RoomCartModel;
@@ -26,8 +27,10 @@ import java.util.concurrent.Executors;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import static com.example.sofra.api.RetrofitClient.getClint;
+
 public class AdapterRoomCart extends RecyclerView.Adapter<AdapterRoomCart.ViewHolder> {
- public static float totalAll;
+ public static float totalAll  = 0;
     Activity activity;
     Context context;
     List<RoomCartModel> listOfDataCart;
@@ -60,12 +63,12 @@ public class AdapterRoomCart extends RecyclerView.Adapter<AdapterRoomCart.ViewHo
         viewHolder.RoomTvName.setText(listOfDataCart.get(i).getName());
         viewHolder.RoomTvQonitityNum.setText(listOfDataCart.get(i).getQuantity());
         viewHolder.RoomTvPrice.setText(listOfDataCart.get(i).getPrice());
-        final float price = Float.parseFloat(listOfDataCart.get(i).getPrice());
-        final int counter = Integer.parseInt(listOfDataCart.get(i).getQuantity());
+         final float price = Float.parseFloat(listOfDataCart.get(i).getPrice());
+         int counter = Integer.parseInt(listOfDataCart.get(i).getQuantity());
         String total = String.valueOf(price * counter);
-        viewHolder.RoomTvTotel.setText("المجموع"+total);
+        viewHolder.RoomTvTotel.setText(""+total);
         totalAll = Float.parseFloat(total)+ totalAll;
-      totalTV.setText(""+totalAll);
+      totalTV.setText("المجموع الكلي = "+totalAll);
         viewHolder.RoomBtnPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,9 +82,9 @@ public class AdapterRoomCart extends RecyclerView.Adapter<AdapterRoomCart.ViewHo
 
                         viewHolder.RoomTvQonitityNum.setText(listOfDataCart.get(i).getQuantity());
                         String totalPlus = String.valueOf(price * finalCount);
-                        viewHolder.RoomTvTotel.setText("المجموع = " + totalPlus );
+                        viewHolder.RoomTvTotel.setText("" + totalPlus );
                         totalAll = (price)+ totalAll;
-                        totalTV.setText(""+totalAll);
+                        totalTV.setText("المجموع الكلي = "+totalAll);
 
 
             }
@@ -98,10 +101,20 @@ public class AdapterRoomCart extends RecyclerView.Adapter<AdapterRoomCart.ViewHo
                         database.cartDeo().update(listOfDataCart.get(i));
                         viewHolder.RoomTvQonitityNum.setText(listOfDataCart.get(i).getQuantity());
                         String totalM = String.valueOf(price * finalCount);
-                        viewHolder.RoomTvTotel.setText("المجموع = " + totalM );
+                        viewHolder.RoomTvTotel.setText("" + totalM );
                         totalAll = totalAll - price;
-                        totalTV.setText(""+totalAll);
+                        totalTV.setText("المجموع الكلي = "+totalAll);
 
+            }
+        });
+
+        viewHolder.RoomDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listOfDataCart.remove(i);
+                AppDatabase db = Room.databaseBuilder(context, AppDatabase.class,
+                        "db").allowMainThreadQueries().fallbackToDestructiveMigration().build();
+                db.cartDeo().deleteItem(listOfDataCart.get(i));
             }
         });
 
@@ -109,10 +122,10 @@ public class AdapterRoomCart extends RecyclerView.Adapter<AdapterRoomCart.ViewHo
     }
 
 
-    private void displayQuantity(int QUANTIT, ViewHolder viewHolder) {
-        viewHolder.RoomTvQonitityNum.setText("" + QUANTIT);
-
-    }
+//    private void displayQuantity(int QUANTIT, ViewHolder viewHolder) {
+//        viewHolder.RoomTvQonitityNum.setText("" + QUANTIT);
+//
+//    }
 
 
     @Override
@@ -141,6 +154,8 @@ public class AdapterRoomCart extends RecyclerView.Adapter<AdapterRoomCart.ViewHo
         TextView RoomTvPrice;
         @BindView(R.id.Room_tv_totel)
         TextView RoomTvTotel;
+        @BindView(R.id.Room_delete)
+        TextView RoomDelete;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

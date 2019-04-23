@@ -11,12 +11,15 @@ import com.example.sofra.model.client_register.RegisterClint;
 import com.example.sofra.model.comments_reviews.CommentsReviews;
 import com.example.sofra.model.complete_order.CompleteOrderClint;
 import com.example.sofra.model.detailsOffers.DetialsOffers;
+import com.example.sofra.model.edit_profile.EditProfile;
 import com.example.sofra.model.general.list_of_cities.ListOfCities;
 import com.example.sofra.model.general.list_of_cities.list_of_region.ListOfRegion;
+import com.example.sofra.model.list_of_notifications.ListOfNotifications;
 import com.example.sofra.model.list_of_restaurants.ListOfRestaurants;
 import com.example.sofra.model.my_items.MyItems;
 import com.example.sofra.model.my_offers_rest.MyOffers;
 import com.example.sofra.model.my_order.MyOrder;
+import com.example.sofra.model.notifications.NotificationClint;
 import com.example.sofra.model.payment.PaymentMethod;
 import com.example.sofra.model.restaurant_details.RestuarantDetails;
 import com.example.sofra.model.restaurant_login.RestaurantLogin;
@@ -178,71 +181,101 @@ public interface ApiServices {
 
 
     @GET("restaurant/my-orders")
-    Call<RestaurantOrder> restaurantMyOrders (@Query("api_token") String api_token ,
-                                              @Query("state") String state ,
-                                              @Query("page") int page);
+    Call<RestaurantOrder> restaurantMyOrders(@Query("api_token") String api_token,
+                                             @Query("state") String state,
+                                             @Query("page") int page);
 
     @GET("restaurant/my-offers")
-    Call<MyOffers> myOffersRestaurant (@Query("api_token") String api_token ,
-                                       @Query("page") int page );
+    Call<MyOffers> myOffersRestaurant(@Query("api_token") String api_token,
+                                      @Query("page") int page);
 
 
     @POST("restaurant/accept-order")
     @FormUrlEncoded
-    Call<AcceptOrder> acceptOrderRest(@Field("api_token") String apiToken , @Field("order_id") String order_id);
+    Call<AcceptOrder> acceptOrderRest(@Field("api_token") String apiToken, @Field("order_id") String order_id);
 
     @POST("restaurant/reject-order")
     @FormUrlEncoded
-    Call<AcceptOrder> rejectOrderRest(@Field("order_id") String order_id , @Field("api_token") String api_token);
+    Call<AcceptOrder> rejectOrderRest(@Field("order_id") String order_id, @Field("api_token") String api_token);
 
     @POST("restaurant/confirm-order")
     @FormUrlEncoded
-    Call<AcceptOrder> confirmOrderRest(@Field("order_id") String order_id , @Field("api_token") String api_token);
+    Call<AcceptOrder> confirmOrderRest(@Field("order_id") String order_id, @Field("api_token") String api_token);
 
     @POST("client/confirm-order")
     @FormUrlEncoded
-    Call<AcceptOrder>  confirmOrderClint (@Field("order_id") String order_id , @Field("api_token") String api_token);
+    Call<AcceptOrder> confirmOrderClint(@Field("order_id") String order_id, @Field("api_token") String api_token);
 
     @POST("client/decline-order")
     @FormUrlEncoded
-    Call<AcceptOrder> cancelOrderClint (@Query("api_token") String order_id , @Field("order_id") String api_token);
+    Call<AcceptOrder> cancelOrderClint(@Query("api_token") String order_id, @Field("order_id") String api_token);
 
     @POST("restaurant/delete-item")
     @FormUrlEncoded
-    Call<AcceptOrder> deleteItemrest(@Field("item_id") String item_id , @Field("api_token") String api_token);
+    Call<AcceptOrder> deleteItemrest(@Field("item_id") String item_id, @Field("api_token") String api_token);
 
     @Multipart
     @POST("restaurant/new-offer")
-    Call<AddNewOfferRest> addNewOfferRest (@Part("description") RequestBody description,
-                                            @Part("price") RequestBody price,
-                                            @Part("starting_at") RequestBody starting_at,
-                                            @Part("name") RequestBody name,
-                                            @Part MultipartBody.Part photo,
-                                            @Part("ending_at") RequestBody  ending_at,
-                                            @Part("api_token") RequestBody api_token);
+    Call<AddNewOfferRest> addNewOfferRest(@Part("description") RequestBody description,
+                                          @Part("price") RequestBody price,
+                                          @Part("starting_at") RequestBody starting_at,
+                                          @Part("name") RequestBody name,
+                                          @Part MultipartBody.Part photo,
+                                          @Part("ending_at") RequestBody ending_at,
+                                          @Part("api_token") RequestBody api_token);
 
     @GET("offers")
-    Call<MyOffers> getOffers (@Query("page") String page);
+    Call<MyOffers> getOffers(@Query("page") String page);
 
     @GET("offer")
-    Call<DetialsOffers> getOfferDetails (@Query("offer_id") String offer_id);
+    Call<DetialsOffers> getOfferDetails(@Query("offer_id") String offer_id);
 
 
     @POST("client/new-order")
     @FormUrlEncoded
-    Call<CompleteOrderClint> completOrder (@Field("restaurant_id") long restaurant_id ,
-                                  @Field("note") String note,
-                                  @Field("address") String address,
-                                  @Field("payment_method_id") long payment_method_id,
-                                  @Field("phone") String phone,
-                                  @Field("name") String name,
-                                  @Field("api_token") String api_token,
-                                  @Field("items[]") List<Integer> items,
-                                  @Field("quantities[]") List<Integer> quantities,
-                                  @Field("notes[]") List<String> notes);
+    Call<CompleteOrderClint> completOrder(@Field("restaurant_id") String restaurant_id,
+                                          @Field("note") String note,
+                                          @Field("address") String address,
+                                          @Field("payment_method_id") long payment_method_id,
+                                          @Field("phone") String phone,
+                                          @Field("name") String name,
+                                          @Field("api_token") String api_token,
+                                          @Field("items[]") List<Integer> items,
+                                          @Field("quantities[]") List<Integer> quantities,
+                                          @Field("notes[]") List<String> notes);
 
     @GET("payment-methods")
-    Call<PaymentMethod> paymentMethods ();
+    Call<PaymentMethod> paymentMethods();
+
+
+    @POST("client/profile")
+    @FormUrlEncoded
+    Call<EditProfile> editProfile(
+            @Field("api_token") String apiToken,
+            @Field("name") String name,
+            @Field("phone") String phone,
+            @Field("email") String email,
+            @Field("password") String password,
+            @Field("password_confirmation") String password_confirmation,
+            @Field("address") String address,
+            @Field("region_id") long region_id);
+
+
+
+    @POST("client/register-token")
+    @FormUrlEncoded
+    Call<NotificationClint> pushClintNotifications(@Field("token")String token,
+                                                   @Field("type") String type,
+                                                   @Field("api_token")String api_token);
+
+    @POST("client/register-token")
+    @FormUrlEncoded
+    Call<NotificationClint> removClintNotifications(@Field("token")String token,
+                                                   @Field("api_token")String api_token);
+
+
+    @GET("client/notifications")
+    Call<ListOfNotifications> getNotifications(@Query("api_token")String api_token);
 }
 
 

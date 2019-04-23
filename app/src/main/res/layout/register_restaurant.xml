@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/layout_register_two"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/Layout2_types"
+            style="@style/margin_items"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xxlarg"
+            android:layout_marginTop="@dimen/larg"
+            android:background="@drawable/back_login_items"
+            android:paddingRight="@dimen/medum">
+
+
+            <com.example.sofra.helper.MultiSelectionSpinner
+                android:layoutDirection="rtl"
+                android:id="@+id/rest_types_sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp" />
+
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/rest_Minimum_Order_et"
+            style="@style/margin_items"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xxlarg"
+            android:layout_below="@+id/Layout2_types"
+            android:layout_marginTop="@dimen/larg"
+            android:background="@drawable/back_login_items"
+            android:gravity="center_vertical"
+            android:hint="@string/minimum_order"
+            android:paddingRight="@dimen/medum" />
+
+        <EditText
+            android:id="@+id/rest_delivery_fee_et"
+            style="@style/margin_items"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xxlarg"
+            android:layout_below="@+id/rest_Minimum_Order_et"
+            android:layout_marginTop="@dimen/larg"
+            android:background="@drawable/back_login_items"
+            android:gravity="center_vertical"
+            android:hint="@string/delivery_fee"
+            android:paddingRight="@dimen/medum" />
+
+        <TextView
+            android:id="@+id/info_commenecation"
+            style="@style/margin_items"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rest_delivery_fee_et"
+            android:layout_marginTop="@dimen/larg"
+            android:drawableRight="@drawable/ic_crop_portrait_black_24dp"
+            android:drawablePadding="@dimen/smal"
+            android:text="بيانات التواصل "
+            android:textColor="@color/black"
+            android:textSize="@dimen/medum"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:id="@+id/layout_info_commenecation"
+            style="@style/margin_items"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xxlarg"
+            android:layout_below="@+id/info_commenecation"
+            android:layout_marginTop="@dimen/larg">
+
+
+            <EditText
+                android:id="@+id/rest_phon"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/back_login_items"
+                android:gravity="center"
+                android:hint="الجوال" />
+
+
+            <EditText
+                android:id="@+id/rest_whats"
+                android:layout_width="220dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/rest_phon"
+                android:background="@drawable/back_login_items"
+                android:gravity="center"
+                android:hint="الواتس اب" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/rest_img"
+            android:layout_margin="@dimen/larg"
+            android:src="@drawable/nophoto"
+            android:layout_below="@+id/layout_info_commenecation"
+            android:layout_width="@dimen/nav_header_height"
+            android:layout_height="@dimen/nav_header_height" />
+
+        <TextView
+            android:id="@+id/New_Acc_text"
+            android:textSize="@dimen/textsize_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_info_commenecation"
+            android:layout_marginTop="@dimen/_100"
+            android:layout_toRightOf="@+id/rest_img"
+            android:text="اضافة صورة للمنتج"
+            android:textColor="@color/black" />
+
+
+        <Button
+            android:layout_marginTop="@dimen/larg"
+            android:layout_below="@+id/rest_img"
+            android:id="@+id/rest_register"
+            style="@style/margin_items"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xxlarg"
+            android:background="@color/green"
+            android:text="@string/register"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medum" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

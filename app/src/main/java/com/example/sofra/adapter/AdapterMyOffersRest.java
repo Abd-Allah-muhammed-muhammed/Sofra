@@ -94,6 +94,7 @@ apiServices.getOfferDetails(String.valueOf(id)).enqueue(new Callback<DetialsOffe
         Data data = response.body().getData();
 
         if (status==1){
+
             SweetAlertDialog dialog = new SweetAlertDialog(context,SweetAlertDialog.NORMAL_TYPE);
             dialog.setTitleText(data.getDescription());
             dialog.setContentText(data.getName());

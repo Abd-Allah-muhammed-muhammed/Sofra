@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/_5xlarg"
+    android:layout_height="wrap_content"
     android:layoutDirection="rtl">
 
     <ImageView
@@ -9,9 +10,9 @@
         android:layout_marginBottom="@dimen/larg"
         android:layout_marginStart="@dimen/smal"
         android:id="@+id/Room_img"
-        android:layout_marginTop="@dimen/larg"
+        android:layout_marginTop="@dimen/smal"
         android:layout_width="@dimen/xxxxlarg"
-        android:layout_height="@dimen/_5xlarg"
+        android:layout_height="@dimen/xxxlarg"
         android:scaleType="fitXY"
         android:src="@drawable/nophoto" />
 
@@ -20,13 +21,14 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:id="@+id/Room_tv_name"
-        android:layout_marginTop="@dimen/larg"
+        android:layout_marginTop="@dimen/smal"
         android:text="@string/food_name_text"
         android:layout_toEndOf="@+id/Room_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <TextView
+        android:textColor="@color/black"
         android:layout_marginEnd="@dimen/smal"
         android:id="@+id/Room_Tv_Qonitity"
         android:textSize="@dimen/text_size_small"
@@ -47,7 +49,7 @@
 <Button
     android:drawableRight="@drawable/ic_add_black_24dp"
 android:id="@+id/Room_btn_plus"
-    android:background="@color/green"
+    android:background="@drawable/back_cart_items"
     android:layout_width="@dimen/larg"
     android:layout_height="@dimen/larg" />
 
@@ -69,7 +71,7 @@ android:id="@+id/Room_btn_plus"
             android:layout_toEndOf="@+id/Room_Tv_Qonitity_num"
             android:drawableRight="@drawable/ic_remove_black_24dp"
             android:id="@+id/Room_btn_minus"
-            android:background="@color/green"
+            android:background="@drawable/back_cart_items"
             android:layout_width="@dimen/larg"
             android:layout_height="@dimen/larg" />
     </RelativeLayout>
@@ -86,22 +88,70 @@ android:id="@+id/Room_btn_plus"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content" />
 
-    <TextView
-        android:textStyle="bold"
-android:textColor="@color/black"
-        android:id="@+id/Room_tv_totel"
-        android:paddingLeft="@dimen/smal"
-        android:textSize="@dimen/text_size_small"
-        android:textDirection="ltr"
+    <LinearLayout
+        android:layoutDirection="ltr"
+        android:orientation="horizontal"
         android:layout_marginTop="@dimen/smal"
-        android:background="@color/gray"
-        android:text="15"
-        android:paddingStart="@dimen/smal"
-        android:drawableStart="@drawable/ic_delete_sweep_black_24dp"
-        android:gravity="center_vertical"
         android:layout_below="@+id/Room_Tv_Qonitity"
+        android:background="@color/gray"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/larg" />
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+
+            android:layout_margin="@dimen/smal"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:id="@+id/Room_tv_totel"
+            android:textSize="@dimen/text_size_small"
+            android:textDirection="ltr"
+            android:background="@drawable/back_cart_items"
+            android:text="15"
+            android:gravity="center"
+            android:layout_width="5dp"
+            android:layout_weight=".5"
+            android:layout_height="20dp" />
+
+
+        <TextView
+            android:textColor="@color/black"
+            android:gravity="end"
+            android:text="المجموع "
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+
+        <RelativeLayout
+            android:gravity="center"
+            android:layout_weight=".5"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/album_dp_30">
+
+            <TextView
+                android:layout_marginTop="@dimen/smal"
+                android:gravity="center_vertical"
+                android:background="@drawable/back_cart_items_delete"
+                android:id="@+id/Room_delete"
+                android:textSize="@dimen/text_size_xtiny"
+                android:drawableEnd="@drawable/ic_cancel_black_24dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="      delete   "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
 
 
 </RelativeLayout>

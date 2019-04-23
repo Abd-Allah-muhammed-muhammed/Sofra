@@ -9,15 +9,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.sofra.DisplayItemFragment;
+import com.example.sofra.ui.fragments.clint.order.DisplayItemFragment;
 import com.example.sofra.R;
-import com.example.sofra.helper.SharedPreferencesManger;
 import com.example.sofra.model.restuarant_food_items.Datum;
 
 import java.util.List;
@@ -31,7 +29,7 @@ public class FoodItemsAdapter extends RecyclerView.Adapter<FoodItemsAdapter.View
     Activity activity;
     Context context;
     List<Datum> listOfRestaurant;
-
+    public String restaurantId;
 
 
     public FoodItemsAdapter(Activity activity, Context context, List<Datum> listOfRestaurant) {
@@ -60,21 +58,23 @@ public class FoodItemsAdapter extends RecyclerView.Adapter<FoodItemsAdapter.View
         final String preparingTime = data.getPreparingTime();
         Glide.with(context).load(photoUrl).into(viewHolder.restaurantImageView);
         final Long id = data.getId();
-        final String restaurantId = data.getRestaurantId();
+          restaurantId = data.getRestaurantId();
         viewHolder.restaurantCardViewEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferencesManger.SaveData(activity,"display_photo",photoUrl);
-                SharedPreferencesManger.SaveData(activity,"display_desc",description);
-                SharedPreferencesManger.SaveData(activity,"display_wait",preparingTime);
-                SharedPreferencesManger.SaveData(activity,"display_price",price);
-                SharedPreferencesManger.SaveData(activity,"display_name",name);
-                SharedPreferencesManger.SaveData(activity,"display_id",id);
-                SharedPreferencesManger.SaveData(activity,"id_restaurant",restaurantId);
 
+
+                DisplayItemFragment fragment = new DisplayItemFragment();
+                fragment.display_photo = photoUrl;
+                fragment.display_wait = preparingTime;
+                fragment.display_price = price;
+                fragment.display_name = name;
+                fragment.display_desc = description;
+                fragment.display_id  = id ;
+                fragment.id_restaurant = restaurantId;
 
                 FragmentManager manager = ((FragmentActivity) context).getSupportFragmentManager();
-                replaceFragment(new DisplayItemFragment(),R.id.Home_replace_fragments,manager.beginTransaction());
+                replaceFragment(fragment,R.id.Home_replace_fragments,manager.beginTransaction());
             }
         });
 

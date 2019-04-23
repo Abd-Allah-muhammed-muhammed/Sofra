@@ -2,8 +2,6 @@ package com.example.sofra.adapter;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -21,14 +19,13 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.chauthai.swipereveallayout.SwipeRevealLayout;
 import com.chauthai.swipereveallayout.ViewBinderHelper;
-import com.example.sofra.Add_new_productFragment;
+import com.example.sofra.ui.fragments.restaurant.food_item.Add_new_productFragment;
 import com.example.sofra.R;
 import com.example.sofra.api.ApiServices;
 import com.example.sofra.helper.SharedPreferencesManger;
 import com.example.sofra.model.accept_order.AcceptOrder;
 import com.example.sofra.model.my_items.MyItemsDatum;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
